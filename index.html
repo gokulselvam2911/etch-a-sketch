@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch A Sketch Plus</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Etch A Sketch Plus</h1>
+    <div class="controls">
+      <label for="gridSize">
+        Grid Size: <span id="gridValue">16</span> X
+        <span id="gridValue2">16</span>
+      </label>
+      <input type="range" id="gridSize" min="1" max="100" value="16" />
+      <label>
+        Color:
+        <input type="color" id="colorPicker" value="#000000" />
+      </label>
+      <label> <input type="checkbox" id="randomColor" /> Random Colors </label>
+      <label>
+        <input type="checkbox" id="darkenMode" /> Progressive Darken
+      </label>
+      <button id="clear">Clear</button>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
