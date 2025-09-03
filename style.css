@@ -31,15 +31,35 @@ h1 {
 }
 
 #container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    width: min(90vmin, 960px);
+    width: 90vmin;
     aspect-ratio: 1 / 1;
     border: 1px solid #333;
+    gap: 0;
+    grid-template-columns: repeat(var(--grid-size), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--grid-size), minmax(0, 1fr));
+
 }
 
 .grid-cell {
     box-sizing: border-box;
     border: 1px solid #eee;
     background-color: white;
+}
+
+
+.grid-container {
+    display: grid;
+    /* keep it square on all screens */
+    width: 90vmin;
+    /* or any % you want */
+    aspect-ratio: 1 / 1;
+
+    grid-template-columns: repeat(var(--grid-size), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--grid-size), minmax(0, 1fr));
+
+    gap: 0;
+    border: 1px solid #000;
+    /* optional outline */
 }
