@@ -6,7 +6,7 @@ It lets you draw pixel-art with your mouse or touch, adjust grid density live, a
 ---
 
 ## Live Demo  
-[**Open on Netlify**](https://your-netlify-link-here) ![Screenshot of Etch A Sketch Plus](images/etch-a-sketch.png)
+[**Open on Netlify**](https://etch-a-sketch-gokul.netlify.app/) ![https://etch-a-sketch-gokul.netlify.app/](images/etch-a-sketch.png)
 ---
 
 ## Features  
