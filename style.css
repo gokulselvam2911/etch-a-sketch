@@ -7,17 +7,36 @@ body {
   padding: 1rem;
   gap: 1rem;
   
+  /* New: Reduce padding on small screens to prevent squeezing */
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+  }
 }
+
 h1 {
   margin: 0;
   font-size: 1.5rem;
+  
+  /* New: Scale font size down on very small screens */
+  @media (max-width: 320px) {
+    font-size: 1.2rem;
+  }
 }
+
 .controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   align-items: center;
   justify-content: center;
+  max-width: 100%; /* New: Prevent controls from exceeding viewport width */
+  
+  /* New: On small screens, stack items vertically for better alignment */
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
 }
 
 .controls input[type="number"] {
@@ -25,18 +44,34 @@ h1 {
 }
 
 #gridSize {
-  width: 200px; /* slider width */
+  width: 200px; /* Original slider width */
+  
+  /* New: Make slider fluid on small screens to avoid overflow */
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 200px;
+  }
 }
+
 #container {
   display: flex;
   flex-wrap: wrap;
   width: min(90vmin, 960px);
   height: min(90vmin, 960px);
   border: 1px solid #333;
+  
+  /* New: Ensure container centers perfectly and doesn't overflow */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent any cell overflow */
 }
 
 .grid-cell {
   box-sizing: border-box;
   border: 1px solid #eee;
   background-color: white;
+  
+  /* New: On very small grids, reduce border thickness for better visibility */
+  @media (max-width: 320px) {
+    border: 0.5px solid #eee;
+  }
 }
